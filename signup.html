@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle</title>
+    <link rel="stylesheet" href="login.css"> 
+    <link rel="icon" href="BUY CYCLE.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+       .admin-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0171d3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+}
+
+.admin-link:hover {
+    background: #025aa5;
+    text-decoration: none;
+    color: white;
+}
+
+.admin-link i {
+    font-size: 12px;
+}
+    </style>
+</head>
+<body>
+    <a href="admin-login.html" target="_blank" class="admin-link" onclick="openAdminLogin()">
+    Admin Login
+</a>
+    
+    <div class="main">
+        <h1 class="buyn"><span style="color:#0171d3">Buy</span><span style="color:#cafc05">Cycle</span></h1>
+
+        <div class="lmain">
+            <img class="loginpic" src="loginpic.jpg" alt="">
+            <div class="login-welcome1"> Welcome !!</div>
+            <div class="quote1">"Sign up today. Shop smarter tomorrow."</div>
+        </div>
+
+        <div class="rmain">
+            <h1 class="log">Sign up <span>To BuyCycle</span></h1>
+            <form class="form" id="signupForm">
+                <label class="text">User name</label>  
+                <br>
+                <input type="text" id="fname" required>
+                <br>
+
+                <label class="text">Email address</label>
+                <br>
+                <input type="text" id="suname" required>
+                <br>
+
+                <label class="text">Password</label><br>
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+                </div>
+
+                <input type="submit" value="Sign up">
+                <br><br>
+                <p> Already have an account?<a href="index.html"> Login</a></p>
+            </form>
+        </div>
+    </div>
+    <p class="copy">&copy; 2025 BuyCycle. All rights reserved.</p>
+
+    <script>
+    // Show/Hide Password
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    eyeIcon.addEventListener('click',()=>{
+        if(password.type === 'password'){
+            password.type = 'text';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        } else {
+            password.type = 'password';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        }
+    });
+
+    // Save Signup Data
+    document.getElementById("signupForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const username = document.getElementById("fname").value;
+        const email = document.getElementById("suname").value;
+        const pwd = document.getElementById("password").value;
+
+        if(username && email && pwd){
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            if(users.some(user => user.email === email)){
+                alert("Email already registered! Login instead.");
+                return;
+            }
+
+            users.push({username, email, pwd});
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Signup successful! Please login.");
+            window.location.href = "index.html";
+        } else {
+            alert("Please fill all fields!");
+        }
+    });
+    </script>
+    <script>
+function openAdminLogin() {
+    // Optional: You can add additional logic here
+    window.open('admin-login.html', '_blank');
+    return false; // Prevent default link behavior
+}
+</script>
+</body>
+</html>
+

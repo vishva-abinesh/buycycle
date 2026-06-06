@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyCycle</title>
+      <link rel="icon" href="BUY CYCLE.png"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+     <script
+      src="https://kit.fontawesome.com/f6816dd194.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    
+
+    <link rel="stylesheet" href="style.css"/>
+    
+  </head>
+
+<style>
+  body{
+    background-color: rgb(244, 238, 226);
+  }
+  
+.container-ac 
+{
+ width: 1150px;
+  margin: 20px auto; 
+  padding: 20px;
+   background-color: white;
+    border-radius: 10px;
+     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+     position: relative;
+     top: 180px;
+     }
+     .head-ac{
+        position: relative;
+            top: 180px;
+            left: 40px;
+            font-size: 45px;
+            font-family: "trirong", sans-serif;
+     }
+.h2-ac
+ {
+   position: relative;
+     top: 0px;
+   margin-top: 0;
+    color: #0171d3;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.844);
+   }
+.section-ac 
+{
+   margin-bottom: 10px;
+   }
+.profile-box 
+{ 
+  display: flex;
+   align-items: center;
+    gap: 15px;
+    position: relative;
+    left: 30px;
+     margin-bottom: 30px;
+     
+   }
+.profile-box img
+ {
+   width: 140px; 
+   height: 140px;
+    border-radius: 50%;
+     border: 5px outset #cafc05;
+     cursor:pointer; 
+     object-fit: cover; 
+    }
+.orders
+ {
+   border: 1px solid #ddd;
+    padding: 20px;
+     border-radius: 8px;
+     background-color: #e8e6e6ec; 
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.271);
+     }
+.orders p
+ {
+   margin-bottom:  10;
+   }
+button.logout-ac
+ {
+   background: #ff3b3b;
+    color: #fff; 
+    border: none;
+     padding: 10px 20px;
+      font-size: 16px;
+       border-radius: 6px;
+        cursor: pointer; 
+        width: 100%;
+      }
+button.logout-ac:hover
+ { 
+  background: #d32f2f;
+ }
+.change-pass { 
+  margin-top: 15px; 
+}
+.input-ac, textarea
+ { padding: 8px; 
+  margin: 5px 0;
+   width: 1100px; 
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   font-size: 15px;
+ 
+   }
+button.save-pass, button.save-consumer
+ { background: #0171d3;
+   color: #fff;
+    border: none;
+     padding: 8px 15px;
+      border-radius: 5px;
+       cursor: pointer;
+        margin-top: 8px;
+       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+        font-size: 15px;
+       }
+button.save-pass:hover, button.save-consumer:hover 
+{ 
+  background: #025aa5;
+ }
+#msg, #consumerMsg
+ {
+   margin-top: 10px;
+    font-weight: bold;
+   }
+.order-card 
+{
+   border:1px solid #ddd;
+    border-radius:10px;
+     background:#fafafa;
+      padding:15px;
+       margin-bottom:15px;
+       }
+.order-details 
+{
+   margin-bottom:10px;
+   }
+.order-details h3 
+{ 
+  margin:0;
+   color:#0171d3;
+   font-size: 20px;
+   }
+   .order-details p{
+    font-size: 18px;
+    margin: 5px;
+   }
+.timeline 
+{ 
+  display:flex;
+   justify-content:space-between; 
+   position:relative;
+    margin-top:15px;
+     margin-bottom:10px;
+     }
+.timeline::before 
+{ content:"";
+ position:absolute;
+ top:12px; left:10%;
+  width:80%;
+   height:4px; 
+   background:#ddd; 
+   z-index:0;
+   }
+   .progress-bar {
+  position: absolute;
+  top: 12px;
+  left: 10%;
+  height: 4px;
+  background: #cafc05;
+  z-index: 1;
+  transition: width 0.8s ease;
+}
+
+.step {
+   display:flex;
+    flex-direction:column;
+     align-items:center;
+      z-index:1;
+       width:25%;
+        position:relative;
+       }
+.step .circle 
+{
+   width:20px; 
+   height:20px; 
+   border-radius:50%; 
+   background:#ddd;
+    margin-bottom:5px;
+   }
+.step.completed .circle
+ {
+   background:#0171d3;
+   
+   }
+.step span 
+{ 
+  font-size:17px;
+   text-align:center;
+   color: #0171d3;
+   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.286);
+  
+  }
+.step .date
+ { 
+  font-size:10px;
+   color:#555;
+   }
+.cancel-btn
+{ 
+   margin-top:5px;
+   padding:5px 10px;
+    border: none;
+     border-radius:10px;
+      background:#ff3b3b;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.671);
+       color:#fff;
+        cursor:pointer; 
+        width: 600px;
+        font-size: 15px;
+        position: relative;
+        left: 250px;
+     }
+.cancel-btn
+ { background:#ff3b3b;
+   color:#fff;
+   }
+.cancel-btn:hover{
+opacity: 0.9;
+}
+#removeProfile 
+{ 
+  margin-top:5px;
+   padding:5px 10px;
+    border: none;
+     border-radius:10px;
+      background:#ff3b3b;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.671);
+       color:#fff;
+        cursor:pointer; 
+        position: relative;
+        top: 23px;
+        right: 155px;
+        font-size: 15px;
+      }
+      .btn-ac{
+         position: relative;
+    top:160px;
+    left: 30px;
+    background-color: #0171d3;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+    cursor: pointer;
+  }
+  .ac-name{
+    font-size: 20px;
+    background-color: #0171d3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+        
+      }
+      .ac-con{
+        position: relative;
+        top: 15px;
+      }
+     .name-st{
+      display: flex; 
+      gap: 50px;
+      justify-content: center;
+      position: relative;
+      top: 30px;
+     }
+     .section1{
+      background-color: #e8e6e6ec;
+      padding: 20px;
+      border-radius: 20px;
+       margin-bottom:20px; 
+       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.271);
+      }
+      .wish-ac{
+        background-color: rgb(234, 8, 106) ;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+        border-radius: 5px;
+      padding: 10px;
+      text-decoration: none;
+       color: white;
+       display: flex;
+       align-items: center;  
+       font-size: 20px;
+          }
+          .copy{
+            position: relative;
+            top: 200px;
+            left: 600px;
+          }
+
+
+
+
+.order-box {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.order-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  color: #0171d3;
+}
+.order-info p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #333;
+}
+         
+</style>
+<body>
+
+ <header class="header">
+      <div class="subheader">
+      <h1 class="buyn">
+        <span style="color: #0171d3">Buy</span><span style="color: #cafc05">Cycle</span>
+      </h1>
+
+      <div class="search">
+        <input
+          type="search"
+          class="input"
+          placeholder="   What are you looking for..."
+        />
+        <button class="btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <script src="search.js"></script>
+      <div class="icons1">
+       <i class="fa fa-heart" style="font-size: 20px;"> <a href="wishlist.html">Wishlist</a></i>
+        <i class="fa fa-shopping-bag" style="font-size: 20px"> <a href="cart.html">Cart</a></i>
+        <i class="fa fa-user-circle" style="font-size: 20px"><a href="account.html">Account</a> </i>
+      </div>
+
+      <button class="logout"  onclick="logout()">
+          <i class="fa fa-sign-out" style="font-size: 20px">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;">Logout</p></i
+          >
+        </button>
+        <script>
+          function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+ </script>
+        
+        
+        <ul class="sidebar">
+          <li onclick="hidesidebar()" class="hidebar"><a href="#" >&times; Cancel</a></li>          
+          <li><a href="home.html" ><i class="fa fa-home" style="font-size: 20px"> Home</i></a></li>
+          <li><a href="cart.html" ><i class="fa fa-shopping-bag" style="font-size: 20px">  Cart</i></a></li>
+          <li><a href="wishlist.html" ><i class="fa fa-heart" style="font-size: 20px">  Wishlist</i></a></li>
+          <li><a href="account.html" ><i class="fa fa-user-circle" style="font-size: 20px">  Account</i></a></li>
+          <li><a href="shop.html" ><i class="fa fa-university" style="font-size: 20px">  Shop</i></a></li>
+          <li><a href="marketplace.html" ><i class="fa fa-money" style="font-size: 20px"> Market Place </i></a></li>
+          <li><a href="sellitem.html" ><i class="fa fa-credit-card" style="font-size: 20px"> Sell Items </i></a></li>
+          <li><a href="index.html" ><i class="fa fa-sign-out" style="font-size: 20px">  Logout</i></a></li>
+        </ul>
+        
+        </div>
+      </header>
+      
+      <nav class="nav">
+        <ul>
+          <li class="hideOnMobile"><a href="home.html" >Home</a></li>
+          <li class="hideOnMobile"><a href="shop.html" >Shop</a></li>
+          <li class="hideOnMobile"><a href="marketplace.html" >Market Place</a></li>
+          <li class="hideOnMobile"><a href="sellitem.html" >Sell Items</a></li>
+
+       <li class="hideOnMobile"><a href="home.html#contact" >Contact</a></li>
+         
+        
+      </ul>
+      <a href="#" class="threeline" onclick="showsidebar()">&#9776</a>
+      <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+              }
+              function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+              }
+      </script>
+
+    </nav>
+<a href="device.html"class="btn-ac"> <span style="font-size: 20px;">&#x2190</span> Go Back</a>
+
+<div class="container-ac">
+
+  <!-- Greeting --> 
+  <div class="section-ac">
+    <h2 id="greeting" class="h2-ac">Hi User </h2>
+  </div>
+
+  <!-- Profile Info -->
+   <div style="padding: 20px; background-color: #e8e6e6ec;border-radius: 20px; margin-bottom: 20px; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.271);">
+  <div class="section profile-box">
+    <img id="profileImg" src="profile.png" >
+    <input type="file" id="profileInput" accept="image/*" style="display:none;" class="input-ac" >
+    <div class="ac-con">
+      <h1 class="h2-ac">Welcome to your BuyCycle dashboard!</h1><br>
+      <h3 style="color:#cafc05;text-shadow: 1.5px 1.5px 1.5px  rgba(12, 12, 12, 0.975);">“Your account, your control — manage orders, payments, and preferences with ease and security.”</h3>
+      <div class="name-st">
+      <p class="ac-name"><strong>Username:</strong> <span id="username"></span></p>
+      <p class="ac-name"><strong>Email:</strong> <span id="email"></span></p>
+      <a href="wishlist.html" class="wish-ac" ><i class="fa fa-heart"> Wishlist </i></a>
+    </div>
+
+      <button id="removeProfile"><i class="fa fa-trash-o"></i> Remove Photo</button>
+    </div>
+  </div>
+</div>
+  <!-- Consumer Details -->
+  <h2 style="color: #0171d3;text-shadow: 1px 1px 1px  rgba(12, 12, 12, 0.71);margin-bottom: 10px;">Personal Information</h2>
+  <div class="section1">
+    <input type="text" id="fullName" placeholder="Full Name" class="input-ac">
+    <input type="text" id="phone" placeholder="Phone Number"class="input-ac">
+    <textarea id="address" placeholder="Address" rows="3"></textarea>
+    <button class="save-consumer" onclick="saveConsumerDetails()">Save Details</button>
+    <p id="consumerMsg"></p>
+  </div>
+
+  <!-- Orders -->
+  <div class="section">
+    <h2 style="color: #0171d3;text-shadow: 1px 1px 1px  rgba(12, 12, 12, 0.71);margin-bottom: 10px;"  > My Orders</h2>
+    <div class="orders" id="ordersContainer"></div>
+  </div>
+
+
+
+  <div id="orders-section"></div>
+
+
+
+  <!-- Settings -->
+  <div class="section" style="margin-top: 20px;">
+    <h2 style="color: #0171d3;text-shadow: 1px 1px 1px  rgba(12, 12, 12, 0.71);margin-bottom: 10px;"> Account Settings</h2>
+    <div class="section1" style="margin-top: 10px;">
+    <button onclick="toggleChangePass()" style="border: none;font-size:20px;cursor: pointer; background-color: #e8e6e6ec;" ><i class='fa fa-key'> Password</i></button>
+    <div id="changePassForm" class="change-pass" style="display:none;">
+      <h2 style="color: #cafc05;text-shadow: 1px 1px 1px  rgba(12, 12, 12, 0.71);">change your password</h2>
+      <input type="password" id="currentPass" placeholder="Current Password" required class="input-ac">
+      <input type="password" id="newPass" placeholder="New Password" required class="input-ac">
+      <input type="password" id="confirmPass" placeholder="Confirm New Password" required class="input-ac">
+      <button class="save-pass" onclick="changePassword()">Save Password</button>
+      <p id="msg"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logout -->
+  <div class="section">
+    <button class="logout-ac" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+ <p class="copy">&copy; 2025 BuyCycle. All rights reserved.</p>
+
+<script>
+// --- User session & greeting ---
+const user = localStorage.getItem("userid");
+const email = localStorage.getItem("signupEmail");
+
+if(user){
+  document.getElementById("greeting").textContent = "Hi, " + user + "...." ;
+  document.getElementById("username").textContent = user;
+  document.getElementById("email").textContent = email;
+} else {
+  window.location.href = "index.html";
+}
+
+// Logout
+function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+
+// Change Password
+function toggleChangePass(){
+  const form = document.getElementById("changePassForm");
+  form.style.display = (form.style.display === "none") ? "block" : "none";
+}
+
+function changePassword(){
+  const current = document.getElementById("currentPass").value;
+  const newPass = document.getElementById("newPass").value;
+  const confirmPass = document.getElementById("confirmPass").value;
+
+  const currentUser = localStorage.getItem("userid");
+  if(!currentUser) return;
+
+  // Get users from localStorage
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Find the logged-in user
+  const userIndex = users.findIndex(u => u.username === currentUser);
+  if(userIndex === -1) return;
+
+  const savedPass = users[userIndex].pwd; // get the correct password
+
+  if(current !== savedPass){
+    document.getElementById("msg").style.color = "red";
+    document.getElementById("msg").textContent = "Current password is incorrect!";
+    return;
+  }
+
+  if(newPass !== confirmPass){
+    document.getElementById("msg").style.color = "red";
+    document.getElementById("msg").textContent = "New passwords do not match!";
+    return;
+  }
+
+  // Update password in users array
+  users[userIndex].pwd = newPass;
+  localStorage.setItem("users", JSON.stringify(users));
+
+  document.getElementById("msg").style.color = "green";
+  document.getElementById("msg").textContent = "Password changed successfully!";
+
+  // Clear inputs
+  document.getElementById("currentPass").value = "";
+  document.getElementById("newPass").value = "";
+  document.getElementById("confirmPass").value = "";
+}
+
+
+// --- Profile Image Upload & Remove ---
+const profileImg = document.getElementById("profileImg");
+const profileInput = document.getElementById("profileInput");
+const removeBtn = document.getElementById("removeProfile");
+
+// Load saved profile image (per user)
+const currentUserImg = localStorage.getItem("userid");
+if (currentUserImg) {
+  const savedImg = localStorage.getItem("profileImg_" + currentUserImg);
+  if (savedImg) {
+    profileImg.src = savedImg;
+  } else {
+    profileImg.src = "profile.png"; // default image
+  }
+}
+
+
+// Click to select image
+profileImg.addEventListener("click", () => profileInput.click());
+
+// When user selects image
+profileInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      profileImg.src = event.target.result;
+      const currentUser = localStorage.getItem("userid");
+      if (currentUser) {
+        localStorage.setItem("profileImg_" + currentUser, event.target.result);
+      }
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
+
+// Remove profile image
+removeBtn.addEventListener("click", () => {
+  profileImg.src = "profile.png"; 
+  const currentUser = localStorage.getItem("userid");
+  if (currentUser) {
+    localStorage.removeItem("profileImg_" + currentUser);
+  }
+});
+
+
+// --- Consumer Details ---
+const fullNameInput = document.getElementById("fullName");
+const phoneInput = document.getElementById("phone");
+const addressInput = document.getElementById("address");
+const consumerMsg = document.getElementById("consumerMsg");
+
+// Load saved consumer details for the logged-in user
+const currentUser = localStorage.getItem("userid");
+if(currentUser){
+  const savedConsumer = JSON.parse(localStorage.getItem("consumerDetails_" + currentUser));
+  if(savedConsumer){
+    fullNameInput.value = savedConsumer.fullName;
+    phoneInput.value = savedConsumer.phone;
+    addressInput.value = savedConsumer.address;
+  } else {
+    fullNameInput.value = "";
+    phoneInput.value = "";
+    addressInput.value = "";
+  }
+}
+
+
+function saveConsumerDetails(){
+  const currentUser = localStorage.getItem("userid"); // get logged in user
+  if (!currentUser) return; // if no user logged in, do nothing
+
+  const consumer = {
+    fullName: fullNameInput.value,
+    phone: phoneInput.value,
+    address: addressInput.value
+  };
+
+  // Save under that user's key
+  localStorage.setItem("consumerDetails_" + currentUser, JSON.stringify(consumer));
+
+  consumerMsg.style.color = "green";
+  consumerMsg.textContent = "Consumer details saved successfully!";
+}
+
+
+// --- Orders ---
+const ordersContainer = document.getElementById("ordersContainer");
+const currentUser1 = localStorage.getItem("userid"); // logged-in user
+let allOrders = JSON.parse(localStorage.getItem("orders")) || [];
+let orders = allOrders.filter(order => order.userid === currentUser); // only current user's orders
+
+
+function calculateStepDates(orderDateStr){
+  const orderDate = new Date(orderDateStr);
+  return [
+    {step:"Ordered", date:orderDate},
+    {step:"Shipped", date:new Date(orderDate.getTime() + 1*24*60*60*1000)},
+    {step:"Out for Delivery", date:new Date(orderDate.getTime() + 2*24*60*60*1000)},
+    {step:"Delivered", date:new Date(orderDate.getTime() + 3*24*60*60*1000)}
+  ];
+}
+
+function renderOrders() {
+  ordersContainer.innerHTML = "";
+  if (orders.length === 0) {
+    ordersContainer.innerHTML = "<p>You have no orders yet.</p>";
+    return;
+  }
+
+  const today = new Date();
+
+  orders.forEach((order, index) => {
+    const div = document.createElement("div");
+    div.className = "order-card";
+
+    // If cancelled, show cancelled state
+    if (order.status === "cancelled") {
+      div.innerHTML = `
+        <div class="order-details">
+          <h3>${order.name} <span style="color:red;"> Cancelled </span></h3>
+          <p>Price: ₹${order.price}</p>
+          <p>Order ID: #${order.id}</p>
+          <p>Date: ${order.date}</p>
+        </div>
+      `;
+      ordersContainer.appendChild(div);
+      return; // skip tracker
+    }
+
+    const stepsData = calculateStepDates(order.date);
+
+    // Count completed steps
+    let completedSteps = 0;
+    stepsData.forEach(s => { if (today >= s.date) completedSteps++; });
+
+    // Progress % based on steps (0 → 100%)
+    const progressPercent = ((completedSteps - 1) / (stepsData.length - 1)) * 80;
+
+    // Timeline with progress bar
+    let timelineHTML = `<div class="timeline">
+                          <div class="progress-bar" style="width:${progressPercent}%;"></div>`;
+    stepsData.forEach(s => {
+      const completed = today >= s.date ? "completed" : "";
+      timelineHTML += `
+        <div class="step ${completed}">
+          <div class="circle"></div>
+          <span>${s.step}</span>
+          <span class="date">${s.date.toLocaleDateString()}</span>
+        </div>`;
+    });
+    timelineHTML += "</div>";
+
+    div.innerHTML = `
+      <div class="order-details">
+        <h3>${order.name}</h3>
+        <p>Price: ₹${order.price}</p>
+        <p>Order ID: #${order.id}</p>
+        <p>Date: ${order.date}</p>
+      </div>
+      ${timelineHTML}
+      <button class="track-btn">Track Order</button>
+      <button class="cancel-btn" onclick="cancelOrder(${index})">Cancel Order</button>
+    `;
+    ordersContainer.appendChild(div);
+  });
+}
+
+
+function renderOrders() {
+  ordersContainer.innerHTML = "";
+  if (orders.length === 0) {
+    ordersContainer.innerHTML = "<p>You have no orders yet.</p>";
+    return;
+  }
+
+  const today = new Date();
+
+  orders.forEach((order, index) => {
+    const div = document.createElement("div");
+    div.className = "order-card";
+
+    // If cancelled, show cancelled state + delete option
+    if (order.status === "cancelled") {
+      div.innerHTML = `
+        <div class="order-details">
+          <h3>${order.name} <span style="color:red;">Cancelled </span></h3>
+          <p>Price: ₹${order.price}</p>
+          <p>Order ID: #${order.id}</p>
+          <p>Date: ${order.date}</p>
+          <button class="cancel-btn" onclick="deleteOrder(${index})"><i class="fa fa-trash-o"></i> Delete</button>
+        </div>
+      `;
+      ordersContainer.appendChild(div);
+      return; // skip tracker
+    }
+
+    const stepsData = calculateStepDates(order.date);
+
+    let completedSteps = 0;
+    stepsData.forEach(s => { if (today >= s.date) completedSteps++; });
+
+    // Add Delivered label if all steps completed
+let deliveredLabel = "";
+if (completedSteps === stepsData.length && order.status !== "cancelled") {
+  deliveredLabel = `<span style="color:green; font-weight:bold;">Delivered</span>`;
+}
+
+
+    const progressPercent = ((completedSteps - 1) / (stepsData.length - 1)) * 80;
+
+    let timelineHTML = `<div class="timeline">
+                          <div class="progress-bar" style="width:${progressPercent}%;"></div>`;
+    stepsData.forEach(s => {
+      const completed = today >= s.date ? "completed" : "";
+      timelineHTML += `
+        <div class="step ${completed}">
+          <div class="circle"></div>
+          <span>${s.step}</span>
+          <span class="date">${s.date.toLocaleDateString()}</span>
+        </div>`;
+    });
+    timelineHTML += "</div>";
+
+    div.innerHTML = `
+      <div class="order-details">
+        <h3>${order.name} ${deliveredLabel}</h3>
+
+        <p>Price: ₹${order.price}</p>
+        <p>Order ID: #${order.id}</p>
+        <p>Date: ${order.date}</p>
+      </div>
+      ${timelineHTML}
+      <button class="cancel-btn" onclick="cancelOrder(${index})">Cancel Order</button>
+    `;
+    ordersContainer.appendChild(div);
+  });
+}
+
+// NEW FUNCTION: Delete cancelled order permanently
+function deleteOrder(index) {
+  if (confirm("Are you sure you want to delete this cancelled order?")) {
+    const orderId = orders[index].id;
+
+    allOrders = allOrders.filter(o => o.id !== orderId);
+    localStorage.setItem("orders", JSON.stringify(allOrders));
+
+    orders = allOrders.filter(o => o.userid === currentUser1);
+
+    renderOrders();
+    alert("Cancelled order deleted successfully!");
+  }
+}
+
+
+function cancelOrder(index) {
+  if (confirm("Are you sure you want to cancel this order?")) {
+    orders[index].status = "cancelled";
+
+    const orderId = orders[index].id;
+    allOrders = allOrders.map(o => o.id === orderId ? orders[index] : o);
+    localStorage.setItem("orders", JSON.stringify(allOrders));
+
+    renderOrders();
+    alert("Order cancelled successfully!");
+  }
+}
+
+
+// Initial render
+renderOrders();
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script>
+  // Add this function to track purchases
+function trackUserPurchase(productName, productPrice) {
+    const currentUser = localStorage.getItem("userid");
+    if (!currentUser) return;
+
+    // Get existing purchase history or create new
+    let purchaseHistory = JSON.parse(localStorage.getItem("purchaseHistory_" + currentUser)) || [];
+    
+    const purchase = {
+        productName: productName,
+        price: productPrice,
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString()
+    };
+    
+    purchaseHistory.push(purchase);
+    localStorage.setItem("purchaseHistory_" + currentUser, JSON.stringify(purchaseHistory));
+}
+
+// Add this to your existing orders rendering to track purchases
+// When an order is placed, call: trackUserPurchase(order.name, order.price);
+</script>
+</body>
+</html>
+
+

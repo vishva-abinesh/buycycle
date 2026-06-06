@@ -1,0 +1,199 @@
+body{
+    
+    background-color:#f1f1f5b3;
+}
+
+:root {
+    --text-color: #0171d3, #cafc05, #03447c, #4a5b07, rgb(244, 238, 226), #c7ed1f75;
+}
+
+.shoplist {
+    
+    position: relative;
+    top: 120px;
+  
+    height: 80px;
+    width: 100%;
+.shoplist img{
+    height: 0px;
+    width: 100%;
+    position: relative;
+    top: 100px;
+}
+
+    
+
+    
+
+}
+
+.shopmain {
+
+    position: relative;
+    top: 180px;
+    margin: 10px;
+    display: grid;
+    background-color: rgb(244, 238, 226);
+
+    .shop-title {
+        font-size: 40px;
+        text-transform: uppercase;
+        padding: 20px;
+        display: inline-block;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 30px;
+    }
+
+    .lap-product {
+
+        position: relative;
+        top: 0px;
+        margin: 10px;
+        height: 380px;
+        width: 320px;
+        border: 2px solid black;
+        display: inline-block;
+        background-color: black;
+        border-radius: 15px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.273), 0 10px 10px rgba(0, 0, 0, 0.36);
+        margin-bottom: 50px;
+
+        img {
+            display: flex;
+            border: 1px solid black;
+            height: 250px;
+            width: 300px;
+            position: absolute;
+            left: 9px;
+            top: 10px;
+            border-radius: 15px;
+        }
+
+
+        h1 {
+            color: white;
+            text-align: center;
+            position: relative;
+            font-size: 20px;
+            top: 275px;
+            text-transform: uppercase;
+            font-family: "trirong", sans-serif;
+        }
+
+        .tv-po {
+
+            position: relative;
+            right: 20px;
+        }
+
+        button {
+            cursor: pointer;
+            width: 150px;
+            display: inline;
+            padding: .75rem 1.25rem;
+            border-radius: 10rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .15rem;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.411);
+            z-index: 1;
+            position: absolute;
+            top: 315px;
+            left: 89px;
+            text-transform: capitalize;
+            color: white;
+            border: 2px solid white;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #0171d3;
+                height: 100%;
+                border-radius: 10rem;
+                z-index: -2;
+
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: #cafc05;
+                transition: all .3s;
+                border-radius: 10rem;
+                z-index: -1;
+
+            }
+
+            &:hover {
+                color: black;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+.logo-mar {
+   
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 160px;
+    gap: 50px;
+    height: 500px;
+    flex-wrap: wrap;
+}
+.box:hover{
+      box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.853);
+  
+}
+.logo-mar img {
+    width: 150px;
+    position: relative;
+    left: 40px;
+}
+
+.box {
+    position: relative;
+    flex-basis: 15%;
+    height: 150px;
+    top: 65px;
+    background-color: white;
+    border-radius: 20px;
+      box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.234);
+  
+}
+#box1{
+    position: relative;
+    top: 30px;
+}
+#box2{
+    position: relative;
+    top: 40px;
+}
+#box3{
+    position: relative;
+    top: 60px;
+}
+#shopmain1{
+    margin-bottom: 60px;
+}

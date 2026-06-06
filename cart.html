@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle</title>
+      <link rel="icon" href="BUY CYCLE.png"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+     <script
+      src="https://kit.fontawesome.com/f6816dd194.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="device.css">
+</head>
+  <style>
+   
+    h2 {
+      margin-bottom: 20px;
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      position: relative;
+    }
+    
+        
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 8px;
+    }
+    .cart-details {
+      flex: 1;
+    }
+    .cart-details p {
+      margin: 3px 0;
+    }
+    .remove-btn {
+      background: none;
+      border: none;
+      font-size: 40px;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+      color: black;
+      top: 5px;
+    }
+    .remove-btn:hover {
+        color: #0171d3;
+    }
+    .total {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+       position: relative;
+        top: 150px;
+        left: 800px;
+        font-size: 20px;
+    }
+    .empty {
+      font-size: 16px;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checkout-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #0171d3;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+       position: relative;
+     top: 150px;
+      right: 200px;
+     width: 1200px;
+      border: 2px solid black;
+    }
+    
+    .checkout-btn:hover {
+      background: #cafc05;
+      color: black;
+    }
+    #cart-items{
+        position: relative;
+        top: 150px;
+        right: 200px;
+       background-color: white;
+       padding: 10px;
+        border: 2px solid black;
+    }
+    h2{
+        position: relative;
+        top: 150px;
+         right: 200px;
+        font-size: 30px;
+        text-align: center;
+        background-color: #0171d3;
+        padding: 10px;
+        border: 2px solid black;
+        color: white;
+
+    }
+    .bigbox{
+        
+        width: 1200px;
+        height: 100%;
+        position: relative;
+        top: 50px;
+        left: 350px;
+    }
+    .btn-like{
+    position: relative;
+    top:110px;
+    left: -320px;
+    background-color: #0171d3;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+    cursor: pointer;
+  }
+    .cart-title{
+      position: relative;
+            top: 130px;
+            left: -310px;
+            font-size: 45px;
+            font-family: "trirong", sans-serif;
+        
+    }
+    /* Cart Items Card */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Remove button hover */
+.remove-btn {
+  transition: transform 0.2s, color 0.2s;
+}
+
+.remove-btn:hover {
+  color: #ff4b4b;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Cart item image */
+.cart-item img {
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.cart-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Checkout button gradient animation */
+.checkout-btn {
+  background: linear-gradient(90deg, #0171d3, #cafc05);
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(90deg, #cafc05, #0171d3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Total section style */
+.total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0171d3;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Animation when cart loads */
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+.cart-item {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+  </style>
+
+<body>
+     <header class="header">
+      <div class="subheader">
+      <h1 class="buyn">
+        <span style="color: #0171d3">Buy</span><span style="color: #cafc05">Cycle</span>
+      </h1>
+
+      <div class="search">
+        <input
+          type="search"
+          class="input"
+          placeholder="   What are you looking for..."
+        />
+        <button class="btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <script src="search.js"></script>
+      <div class="icons1">
+       <i class="fa fa-heart" style="font-size: 20px;"> <a href="wishlist.html">Wishlist</a></i>
+        <i class="fa fa-shopping-bag" style="font-size: 20px"> <a href="cart.html">Cart</a></i>
+        <i class="fa fa-user-circle" style="font-size: 20px"><a href="account.html">Account</a> </i>
+      </div>
+
+      <button class="logout"  onclick="logout()">
+          <i class="fa fa-sign-out" style="font-size: 20px">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;">Logout</p></i
+          >
+        </button>
+        <script>
+          function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+ </script>
+        
+        
+        <ul class="sidebar">
+          <li onclick="hidesidebar()" class="hidebar"><a href="#" >&times; Cancel</a></li>          
+          <li><a href="home.html" ><i class="fa fa-home" style="font-size: 20px"> Home</i></a></li>
+          <li><a href="cart.html" ><i class="fa fa-shopping-bag" style="font-size: 20px">  Cart</i></a></li>
+          <li><a href="wishlist.html" ><i class="fa fa-heart" style="font-size: 20px">  Wishlist</i></a></li>
+          <li><a href="account.html" ><i class="fa fa-user-circle" style="font-size: 20px">  Account</i></a></li>
+          <li><a href="shop.html" ><i class="fa fa-university" style="font-size: 20px">  Shop</i></a></li>
+          <li><a href="marketplace.html" ><i class="fa fa-money" style="font-size: 20px"> Market Place </i></a></li>
+          <li><a href="sellitem.html" ><i class="fa fa-credit-card" style="font-size: 20px"> Sell Items </i></a></li>
+          <li><a href="index.html" ><i class="fa fa-sign-out" style="font-size: 20px">  Logout</i></a></li>
+        </ul>
+        
+        </div>
+      </header>
+      
+      <nav class="nav">
+        <ul>
+          <li class="hideOnMobile"><a href="home.html" >Home</a></li>
+          <li class="hideOnMobile"><a href="shop.html" >Shop</a></li>
+          <li class="hideOnMobile"><a href="marketplace.html" >Market Place</a></li>
+          <li class="hideOnMobile"><a href="sellitem.html" >Sell Items</a></li>
+
+          <li class="hideOnMobile"><a href="home.html#contact" >Contact</a></li>
+         
+        
+      </ul>
+      <a href="#" class="threeline" onclick="showsidebar()">&#9776</a>
+      <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+              }
+              function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+              }
+      </script>
+
+    </nav>
+    <div class="bigbox">
+       <a href="device.html"class="btn-like"> <span style="font-size: 20px;">&#x2190</span> Go Back</a>
+       <h1 class="cart-title"><u>My Items</u></h1>
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p class="total">Total: ₹<span id="cart-total">0</span></p>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+    <div></div>
+     
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const userId = localStorage.getItem("userid"); // current logged-in user
+let cart = JSON.parse(localStorage.getItem(`cart_${userId}`)) || [];
+
+  let total = 0;
+  let cartItems = document.getElementById("cart-items");
+
+  function updateCart() {
+    cartItems.innerHTML = "";
+    total = 0;
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = "<p class='empty'>Your cart is empty.</p>";
+      document.querySelector(".total").style.display = "none";
+      document.querySelector(".checkout-btn").style.display = "none";
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      cartItems.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.img}" alt="${item.name}">
+          <div class="cart-details">
+            <p><strong>${item.name}</strong></p>
+            <p>₹${item.price}</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">&times;</button>
+        </div>
+      `;
+      total += item.price;
+    });
+
+    document.getElementById("cart-total").textContent = total;
+  }
+
+  window.removeItem = function(index) {
+    cart.splice(index, 1);
+    localStorage.setItem(`cart_${userId}`, JSON.stringify(cart));
+
+    updateCart();
+  }
+
+  updateCart();
+});
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

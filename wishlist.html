@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle</title>
+      <link rel="icon" href="BUY CYCLE.png"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+     <script
+      src="https://kit.fontawesome.com/f6816dd194.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="device.css">
+</head>
+  <style>
+        .wishlist-item {
+             color: white;
+            border: 1px solid black;
+            background-color: #0171d3;
+            width: 350px;
+             height: 380px;
+             border-radius: 20px;
+            box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.537);
+            position: relative;
+            top: 160px;
+            left: 10px;
+         
+          
+        }
+        .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+       
+         .box-box {
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        position: relative;
+        left: 25px;
+        top: 20px;
+
+    }
+        .wishlist-item img {
+        width: 185px;
+        height: 150px;
+        position: relative;
+        left: 85px;
+        top: -160px;
+        
+        }
+       
+
+
+        .remove {
+            
+        cursor: pointer;
+        width: 120px;
+
+        padding: .70rem 1.25rem;
+        border-radius: 10rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        transition: all .3s;
+        overflow: hidden;
+        box-shadow: 0 5px 5px rgba(255, 255, 255, 0.411);
+        z-index: 1;
+        position: absolute;
+        top: 315px;
+        left: 30px;
+        text-transform: capitalize;
+        color: white;
+        border: 2px solid white;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.853);
+            height: 100%;
+            border-radius: 10rem;
+            z-index: -2;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: red;
+            transition: all .3s;
+            border-radius: 10rem;
+            z-index: -1;
+
+        }
+
+        &:hover {
+            color: white;
+
+            &:before {
+                width: 100%;
+            }
+        }
+        
+    }
+    .remove1{
+        cursor: pointer;
+        width: 120px;
+
+        padding: .70rem 1.25rem;
+        border-radius: 10rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        transition: all .3s;
+        overflow: hidden;
+        box-shadow: 0 5px 5px rgba(255, 255, 255, 0.411);
+        z-index: 1;
+        position: absolute;
+        top: 315px;
+        left: 180px;
+        text-transform: capitalize;
+        color: white;
+        border: 2px solid white;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.853);
+            height: 100%;
+            border-radius: 10rem;
+            z-index: -2;
+
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #cafc05;
+            transition: all .3s;
+            border-radius: 10rem;
+            z-index: -1;
+
+        }
+
+        &:hover {
+            color: black;
+
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+        
+        h3{
+            position: absolute;
+            top: 230px;
+            width: 300px;
+            left: 30px;
+        }
+        .prices{
+            position: absolute;
+            top: 280px;
+            left: 30px;
+            font-size: 25px;
+            
+        }
+        .title{
+            position: relative;
+            top: 160px;
+            left: 40px;
+            font-size: 45px;
+            font-family: "trirong", sans-serif;
+        }
+        #wishlist-container {
+           display: flex;
+           flex-wrap: wrap;
+           grid-template-columns: repeat(4, 1fr); 
+           gap: 20px; 
+           margin: 20px;
+}
+  .title1{
+    font-size: 30px;
+    position: relative;
+    top: 190px;
+    left: 600px;
+    background-color: #0171d3;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+  }
+  .btn-like{
+    position: relative;
+    top:140px;
+    left: 30px;
+    background-color: #0171d3;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.467);
+    cursor: pointer;
+  }
+  .like-con{
+    position: relative;
+    top: 20px;
+    height: auto;
+  }
+
+    </style>
+<body>
+ <header class="header">
+      <div class="subheader">
+      <h1 class="buyn">
+        <span style="color: #0171d3">Buy</span><span style="color: #cafc05">Cycle</span>
+      </h1>
+
+      <div class="search">
+        <input
+          type="search"
+          class="input"
+          placeholder="   What are you looking for..."
+        />
+        <button class="btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <script src="search.js"></script>
+      <div class="icons1">
+       <i class="fa fa-heart" style="font-size: 20px;"> <a href="wishlist.html">Wishlist</a></i>
+        <i class="fa fa-shopping-bag" style="font-size: 20px"> <a href="cart.html">Cart</a></i>
+        <i class="fa fa-user-circle" style="font-size: 20px"><a href="account.html">Account</a> </i>
+      </div>
+
+      <button class="logout"  onclick="logout()">
+          <i class="fa fa-sign-out" style="font-size: 20px">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;">Logout</p></i
+          >
+        </button>
+        <script>
+          function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+ </script>
+        
+        
+        <ul class="sidebar">
+          <li onclick="hidesidebar()" class="hidebar"><a href="#" >&times; Cancel</a></li>          
+          <li><a href="home.html" ><i class="fa fa-home" style="font-size: 20px"> Home</i></a></li>
+          <li><a href="cart.html" ><i class="fa fa-shopping-bag" style="font-size: 20px">  Cart</i></a></li>
+          <li><a href="wishlist.html" ><i class="fa fa-heart" style="font-size: 20px">  Wishlist</i></a></li>
+          <li><a href="account.html" ><i class="fa fa-user-circle" style="font-size: 20px">  Account</i></a></li>
+          <li><a href="shop.html" ><i class="fa fa-university" style="font-size: 20px">  Shop</i></a></li>
+          <li><a href="marketplace.html" ><i class="fa fa-money" style="font-size: 20px"> Market Place </i></a></li>
+          <li><a href="sellitem.html" ><i class="fa fa-credit-card" style="font-size: 20px"> Sell Items </i></a></li>
+          <li><a href="index.html" ><i class="fa fa-sign-out" style="font-size: 20px">  Logout</i></a></li>
+        </ul>
+        
+        </div>
+      </header>
+      
+      <nav class="nav">
+        <ul>
+          <li class="hideOnMobile"><a href="home.html" >Home</a></li>
+          <li class="hideOnMobile"><a href="shop.html" >Shop</a></li>
+          <li class="hideOnMobile"><a href="marketplace.html" >Market Place</a></li>
+          <li class="hideOnMobile"><a href="sellitem.html" >Sell Items</a></li>
+
+           <li class="hideOnMobile"><a href="home.html#contact" >Contact</a></li>
+         
+        
+      </ul>
+      <a href="#" class="threeline" onclick="showsidebar()">&#9776</a>
+      <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+              }
+              function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+              }
+      </script>
+
+    </nav>
+
+<div class="like-con">
+ <a href="device.html"class="btn-like"> <span style="font-size: 20px;">&#x2190</span> Go Back</a>
+<h1 class="title"><u>My Wishlist</u></h1>
+<div id="wishlist-container"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const wishlistContainer = document.getElementById('wishlist-container');
+    const userId = localStorage.getItem('userid'); 
+let wishlist = JSON.parse(localStorage.getItem(`wishlist_${userId}`)) || [];
+
+
+    function renderWishlist() {
+        wishlistContainer.innerHTML = '';
+        if (wishlist.length === 0) {
+            wishlistContainer.innerHTML = '<p class="title1">No products in wishlist</p>';
+            return;
+        }
+        wishlist.forEach(item => {
+            const div = document.createElement('div');
+            div.classList.add('wishlist-item');
+            div.innerHTML = `
+                <div class="box-box"></div>
+                <img src="${item.image}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p class="prices">₹${item.price}</p>
+                <button class="remove" data-id="${item.id}">Remove</button>
+                <a href="device.html"><button class="remove1">shop</button></a>
+                
+            `;
+            wishlistContainer.appendChild(div);
+        });
+    }
+wishlistContainer.addEventListener('click', function(e) {
+    if (e.target.classList.contains('remove')) {
+        const div = e.target.closest('.wishlist-item');
+        div.classList.add('fade-out'); // add fade-out effect
+        setTimeout(() => {
+            const id = e.target.dataset.id;
+            wishlist = wishlist.filter(item => String(item.id) !== id);
+            localStorage.setItem(`wishlist_${userId}`, JSON.stringify(wishlist));
+            renderWishlist();
+        }, 300); // wait for CSS transition
+    }
+});
+
+
+
+    renderWishlist();
+</script>
+
+
+</body>
+</html>
+
+
+login.html

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="BUY CYCLE.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .admin-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0171d3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+}
+
+.admin-link:hover {
+    background: #025aa5;
+    text-decoration: none;
+    color: white;
+}
+
+.admin-link i {
+    font-size: 12px;
+}
+    </style>
+</head>
+<body>
+    <a href="admin-login.html" target="_blank" class="admin-link" onclick="openAdminLogin()">
+    Admin Login
+</a>
+    
+    <div class="main">
+        <h1 class="buyn"><span style="color:#0171d3">Buy</span><span style="color:#cafc05">Cycle</span></h1>
+
+        <div class="lmain">
+            <img class="loginpic" src="loginpic.jpg" alt="">
+            <div class="login-welcome"> Welcome Back!</div>
+            <div class="quote">"Log in to unlock exclusive deals and seamless shopping."</div>
+        </div>
+
+        <div class="rmain">
+            <h1 class="log">Login <span>To BuyCycle</span></h1>
+            <form class="form" id="loginForm">
+                <label class="text">Email address</label>
+                <br>
+                <input type="text" id="uname" required>
+                <br>
+
+                <label class="text">Password</label>
+                <br>
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+                </div>
+
+                <input type="submit" value="Login">
+                <br><br>
+                <p> Don't have an account?<a href="signup.html"> Sign up</a></p>
+            </form>
+        </div>
+    </div>
+    <p class="copy">&copy; 2025 BuyCycle. All rights reserved.</p>
+
+
+
+
+    <script>
+    // Show/Hide Password
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    eyeIcon.addEventListener('click',()=>{
+        if(password.type === 'password'){
+            password.type = 'text';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        } else {
+            password.type = 'password';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        }
+    });
+
+    // Handle Login
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const email = document.getElementById("uname").value;
+        const pwd = document.getElementById("password").value;
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find(u => u.email === email && u.pwd === pwd);
+
+        if(user){
+            localStorage.setItem("userid", user.username);
+            localStorage.setItem("signupEmail", user.email);
+            window.location.href = "home.html"; 
+        } else {
+            alert("Invalid Email or Password!");
+        }
+    });
+    </script>
+    <script>
+function openAdminLogin() {
+    // Optional: You can add additional logic here
+    window.open('admin-login.html', '_blank');
+    return false; // Prevent default link behavior
+}
+</script>
+</body>
+</html>

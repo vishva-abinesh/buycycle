@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyCycle</title>
+        <link rel="icon" href="BUY CYCLE.png"> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+     <script
+      src="https://kit.fontawesome.com/f6816dd194.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+    <link rel="stylesheet" href="style.css"/>
+    
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="subheader">
+      <h1 class="buyn">
+        <span style="color: #0171d3">Buy</span><span style="color: #cafc05">Cycle</span>
+      </h1>
+
+      <div class="search">
+        <input
+          type="search"
+          class="input"
+          placeholder="   What are you looking for..."
+        />
+        <button class="btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <script src="search.js"></script>
+      <div class="icons1">
+       <i class="fa fa-heart" style="font-size: 20px;"> <a href="wishlist.html">Wishlist</a></i>
+        <i class="fa fa-shopping-bag" style="font-size: 20px"> <a href="cart.html">Cart</a></i>
+        <i class="fa fa-user-circle" style="font-size: 20px"><a href="account.html">Account</a> </i>
+      </div>
+
+      <button class="logout"  onclick="logout()">
+          <i class="fa fa-sign-out" style="font-size: 20px">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;">Logout</p></i
+          >
+        </button>
+        <script>
+          function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+ </script>
+        
+        
+        <ul class="sidebar">
+          <li onclick="hidesidebar()" class="hidebar"><a href="#" >&times; Cancel</a></li>          
+          <li><a href="home.html" ><i class="fa fa-home" style="font-size: 20px"> Home</i></a></li>
+          <li><a href="cart.html" ><i class="fa fa-shopping-bag" style="font-size: 20px">  Cart</i></a></li>
+          <li><a href="wishlist.html" ><i class="fa fa-heart" style="font-size: 20px">  Wishlist</i></a></li>
+          <li><a href="account.html" ><i class="fa fa-user-circle" style="font-size: 20px">  Account</i></a></li>
+          <li><a href="shop.html" ><i class="fa fa-university" style="font-size: 20px">  Shop</i></a></li>
+          <li><a href="marketplace.html" ><i class="fa fa-money" style="font-size: 20px"> Market Place </i></a></li>
+          <li><a href="sellitem.html" ><i class="fa fa-credit-card" style="font-size: 20px"> Sell Items </i></a></li>
+          <li><a href="index.html" ><i class="fa fa-sign-out" style="font-size: 20px">  Logout</i></a></li>
+        </ul>
+        
+        </div>
+      </header>
+      
+      <nav class="nav">
+        <ul>
+          <li class="hideOnMobile"><a href="home.html" >Home</a></li>
+          <li class="hideOnMobile"><a href="shop.html" >Shop</a></li>
+          <li class="hideOnMobile"><a href="marketplace.html" >Market Place</a></li>
+          <li class="hideOnMobile"><a href="sellitem.html" >Sell Items</a></li>
+
+ <li class="hideOnMobile"><a href="home.html#contact" >Contact</a></li>
+         
+        
+      </ul>
+      <a href="#" class="threeline" onclick="showsidebar()">&#9776</a>
+      <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+              }
+              function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+              }
+      </script>
+
+    </nav>
+
+    <main class="main" id="main" >
+      <div class="backimg"></div>
+      <div class="left-main" data-aos="fade-right">
+      <p class="uptitle">All-in-One Marketplace!</p>
+      <h1 class="main-title">WELCOME TO <span class="main-title2"><span class="main-title3">BUY</span>CYCLE</span></h1>
+      <p class="font-effect-shadow-multiple">From Brands to People, and People to People – Buy Smarter with BuyCycle</p>
+    <div class="conbtn">
+      <a href="device.html" class="button-mainlink"><button class="button-main">SHOP</button></a>
+      <a href="sellitem.html" class="button-mainlink"><button class="button-main">Sell</button></a>
+      </div>
+    </div>
+
+     <div class="rigth-main" data-aos="fade-left">
+      <img class="img-main1" src="mainimg.jpg" alt="">
+      <p class="quote-main1">Discover top brands at your fingertips<span class="ribbon1">BUY</span></p>
+      <img class="img-main2" src="mainimg3.jpg" alt="">
+      
+      <p class="quote-main2">Sell what you own, buy what you love<span class="ribbon2">SELL</span></p>
+      <img class="img-main3" src="mainimg2.jpg" alt="">
+      <p class="quote-main3"> Shop direct, fast, and secure<span class="ribbon3">BUY</span></p>
+      
+     </div>
+    </main>
+
+    <section id="feature" class="section-p1" data-aos="fade-right"
+     data-aos-offset="150"
+     data-aos-easing="ease-in-sine">
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/PrN2Y6Cv/f1.png" alt="">
+    
+    <h6>Free Shipping</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/qvycxW4q/f2.png" alt="">
+    <h6>Fast Delivery</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/1Rdphyz4/f3.png" alt="">
+    <h6>Save Money</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/GpYc2JFZ/f4.png" alt="">
+    <h6>Purchase</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/4yFCwmv6/f5.png" alt="">
+    <h6>Happy Sell</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="https://i.postimg.cc/gJN1knTC/f6.png" alt="">
+    <h6>24/7 Support</h6>
+  </div>
+    </section>
+  
+<section class="section2">
+  <h1>TOP SALES</h1>
+  <h3>Top Picks - Low Prices - Fast Sales</h3>
+  <section id="collection">
+
+        <div class="collections" >
+
+            <div class="content" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+                <img src="homelaptop.jpg" alt="img" />
+                <div class="img-content">
+                    <p>LAPTOPS</p><br>
+                    <button><a href="device.html#laptop">SHOP NOW</a></button>
+                </div>
+            </div>
+
+            <div class="content2" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+                <img src="homephone2.jpg" alt="img" />
+                <div class="img-content2">
+                    <p>MOBILES</p><br>
+                    <button><a href="device.html#mobile">SHOP NOW</a></button>
+                </div>
+            </div>
+            
+            <div class="content3" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
+                <img src="homeair.jpg" alt="img" />
+                <div class="img-content3">
+                    <p>AIRBUDS</p><br>
+                    <button><a href="device.html#airbud">SHOP NOW</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+    
+<section class="section3">
+  <div class="sec-left">
+    <div class="sec-img">
+    <img class="imgsell2" data-aos="fade-up-left" data-aos-duration="500" src="sellimag2.jpeg" alt="">
+    <img class="imgsell3" data-aos="fade-down-right" data-aos-duration="500" src="sellimage4.jpeg" alt="">
+    <img class="imgsell4" src="sellimage1.jpeg" alt="">
+  </div>
+  </div>
+  <div class="sec-right">
+    <div class="text-con">
+      <h2> <u> do you want sale your product!!</u></h2>
+    <h1>Grow from local to legendary with <span class="sell-sec">BUY</span><span>CYCLE</span></h1>
+    <h3>Reach millions of buyers across 18,000+ pin codes nationwide</h3>
+    <a class="button-selllink" href="sellitem.html"><button class="button-sell"><b>SELL NOW</b></button></a>
+  </div>
+  </div>
+  
+</section>
+
+<section class="banner">
+  
+  <h1 data-aos="zoom-in-up">Up to <span>60%</span>  off - All Device and Gadgets</h1>
+  <a href="shop.html" ><button >Explore More</button></a>
+
+</section>
+
+<section class="sec-mail" id="contact">
+  
+  <div class="right-mail">
+    <form class="formclass" action="https://api.web3forms.com/submit" method="POST">
+    
+      <div class="contact-title">
+        <h1>Get in touch</h1>
+        <hr>
+      </div>
+    <input type="hidden" name="access_key" value="65aa0777-487e-4a70-9223-47479e15b0f5"/>
+    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+    <input type="hidden" name="from_name" value="My Website" />
+        <input type="text" name="name" id="name" placeholder="FULL NAME" class="emailcontact" required>
+        <input type="email" name="email" id="email" placeholder="EMAIL" class="emailcontact" required>
+        <textarea name="Message" id="messsage" placeholder="MESSAGE" class="emailcontact" required></textarea>
+        
+      <button  class="button-email" type="submit">Send <img src="arrow_icon.png" alt=""></button>
+    </form>
+  </div>
+  
+  <div class="left-mail">
+    <h1>Contact us</h1>
+    <hr class="line">
+    <div class="left-con-mail">
+    <p>We are here to help you with anything — whether you're shopping, selling, or just exploring!</p>
+    <div class="icons-con">
+    <i class="fa fa-envelope"></i><p> Email: abineshvishva457@gmail.com</p>
+    <i class="fa fa-phone"></i><p>Phone:  +91 8838246996</p>
+    <i class="fa fa-map-marker"></i><p>Location:  Faisal Nagar,kenikarai,Ramanathapuram - 623504</p>
+    <i class="fa fa-clock-o"></i><p>Support Hours:  Mon–Sat, 10:00 AM – 8:00 PM</p>
+  </div>
+  </div>
+  </div>
+  
+  <hr class="center-line">
+</section>
+
+
+<footer>
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+    
+  
+    <div style="flex: 1; min-width: 220px;">
+      <h1 style="margin-bottom: 15px;"><span class="sell-sec">BUY</span><span>CYCLE</span></h1>
+      <p style="line-height: 1.6; color: #ccc;">
+        Your trusted marketplace for buying and selling electronics. Whether you're a customer or an individual seller, BuyCycle connects you directly, securely, and easily.
+      </p><br>
+      <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="">
+    </div>
+
+   
+    <div class="colum2" style="flex: 1; min-width: 180px;">
+      <h4 style="margin-bottom: 15px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc;">
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Shop</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Market Place</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Sell items</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div style="flex: 1; min-width: 180px;">
+      <h4 style="margin-bottom: 15px;">Customer Support</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc;">
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Help Center</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Return Policy</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Shipping Info</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Order Tracking</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Report a Seller</a></li>
+      </ul>
+    </div>
+
+
+    <div style="flex: 1; min-width: 220px;">
+      <h4 style="margin-bottom: 15px;">Connect With Us</h4>
+      <p style="color: #ccc;padding-bottom: 10px;">Email: abineshvishva457@gmail.com</p>
+      <p style="color: #ccc;padding-bottom: 10px;">Phone: +91 8838246996</p>
+      <p style="color: #ccc;">Location: Faisal nagar, kenikarai, Ramanathapuram - 623504</p>
+
+      
+      
+    </div>
+
+  </div>
+  <br>
+  <div class="social-media">
+ 
+       <div class="social">
+     
+        <a href="https://www.instagram.com/iam_vishva_abinesh?igsh=ZjRpY2ozZXB5OWNo"><i class="fa fa-instagram "></i></a>
+      </div>
+
+      <div class="social">
+        
+        <a href="https://www.facebook.com/share/15kPfXMVGu/"><i class="fa fa-facebook "></i></a>
+      </div>
+
+      <div class="social">
+       
+        <a href=" https://wa.me/qr/M2F5J4TMQ36ZI1 "><i class="fa fa-whatsapp "></i></a>
+      </div>
+
+      <div class="social">
+      
+       <a href="https://x.com/VishvaAbinesh57"><i class="fa fa-twitter"></i></a> 
+      </div>
+      
+      <div class="social">
+        
+        <a href="https://github.com/vishva-abinesh"><i class="fa fa-github"></i></a>
+      </div>
+      <div class="social">
+       
+       <a href="https://www.linkedin.com/in/vishva-abinesh-b9b861326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a> 
+      </div>
+  </div>
+
+  <hr style="margin: 10px 0; width: 1550PX; position: relative; right: 30px; border-color: #f3eded; ">
+
+  <div style="text-align: center; color: #aaa; font-size: 14px; margin-top: 20px;">
+    <a href="https://policies.google.com/privacy?hl=en-US" style="color: #aaa; text-decoration: none; ">Privacy Policy</a> | <a href="https://policies.google.com/terms?hl=en-US" style="color: #aaa; text-decoration: none;">Terms & Conditions</a>
+     <br><br>
+    © 2025 BuyCycle. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+
+
+login.html

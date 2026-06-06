@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle</title>
+     <link rel="icon" href="BUY CYCLE.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+     <script
+      src="https://kit.fontawesome.com/f6816dd194.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="device.css">
+</head>
+<style>
+    
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .sell-head{
+      
+      display:flex;
+      height: 100px;
+      width: 100%;
+      gap: 40px;
+      background-color: white;
+      position: relative;
+      top: 125px;
+      
+     
+
+      
+    }
+    
+    .sell-title
+    {
+      font-size:50px;
+      color:#caf814;
+      display:flex;
+      align-items:center;
+      position:relative;
+      left: 80px;
+      text-transform: capitalize;
+      text-shadow: 2px 2px 2px  rgba(0, 0, 0, 0.959);
+    }
+    a.btn{
+      text-decoration:none;
+      background-color: #cafc05;
+      color:#000;
+      padding:10px 14px;
+      border-radius:15px;
+      box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.301);
+      border: 2px solid rgba(0, 0, 0, 0.415);
+      font-size:15px;
+      font-weight: bold;
+      height: 20px;
+      position: relative;
+      top: 30px;
+      left: 500px;
+      text-transform: uppercase;
+    }
+    a.btn:hover{
+      box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.523);
+    }
+    .sell-main{
+      width:1200px;
+     
+      display:grid;
+      grid-template-columns:1fr;
+      gap:24px;
+      position: relative;
+      top: 125px; 
+      left: 545px;
+    }
+    .card1{
+      width: 1475px;
+      background-color: #0171d3;
+      height: 750px;
+      padding:22px;
+      box-shadow:2px 2px 2px rgba(0, 0, 0, 0.305);
+      position: relative;
+      right: 545px;
+      border: 2px inset rgba(128, 128, 128, 0.34);
+    }
+    .sell-form{
+      margin-top: 20px;
+      font-family: 'Times New Roman', Times, serif
+    }
+    form .row{
+    display:flex;
+    gap:12px;
+    margin-bottom:12px;
+    }
+    form .col
+    {flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:8px
+    }
+    label{
+    font-size:20px;
+    color:black;
+    text-shadow: 0.5px 0.5px 0.5px #404f02
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, input[type="date"], select {
+      padding:12px 14px;
+      border-radius:10px;
+      border-color: #cafc05;
+      background:#cde5fa;
+      font-size:16px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.54);
+    }
+    .textarea-sell{
+      position: relative;
+      bottom: 200px;
+      
+    }
+    textarea
+    { 
+        color: black;
+        height:80px;
+        resize:vertical;
+        width: 200px;
+        position: relative;
+        top: -80px;
+}
+
+    .small{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:4px
+}
+.muted{
+  position: relative;
+  bottom:70px;
+  font-size: 20px;
+  font-weight: bold;
+  .btn-arrow{
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 50%;
+    width: 80px;
+    position: relative;
+    top: 15px;
+    left: 180px;
+    background-color: #cbfc05c0;
+  
+  }
+}
+
+
+    .form-actions
+    {
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-top:8px;
+    position: relative;
+    bottom: 230px;
+   
+    
+}
+    button.primary{
+      background:#cafc05;
+      color:black;
+      padding:12px 16px;
+      border-radius:10px;
+      border:1px unset #333e03;
+      font-weight:700;
+      cursor:pointer;
+      box-shadow: 2px 2px 2px  rgba(0, 5, 11, 0.44);
+    }
+    button.ghost
+    {
+      background:white;
+      position: relative;
+      left: 20px;
+    border:1px solid #caf814;
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow: 2.1px 2.1px 2.1px  rgba(0, 0, 0, 0.959);
+    }
+    .primary:hover{
+
+      box-shadow:3px 3px 3px 3px rgba(0, 0, 0, 0.523);
+    }
+    .ghost:hover{
+           box-shadow:3px 3px 3px 3px rgba(0, 0, 0, 0.523);
+    }
+    #sellingproduct{
+    scroll-margin: 100px;
+    }
+    #belowFormList
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        flex-direction:row;
+         gap: 5px;
+        margin-top:8px;
+        margin-bottom: -30px;
+    }
+    .product-parent{
+         flex: 0 0 calc(50% - 20px);  
+          display: flex;
+    }
+    .product-box{
+      width:750px;
+      height:400px;
+      display:flex;
+      gap:20px;
+      border-radius:12px;
+      overflow:hidden;
+      background:linear-gradient(180deg, #ffffff, #fbfdff);
+      border:1px solid #eef2f7;
+      box-shadow: 0 8px 30px rgba(12,18,40,0.04);
+      position: relative;
+      bottom: 90px;
+      right: 540px;
+      font-family: Arial;
+     
+    }
+    .product-imagess
+    {
+    flex:0 0 40%;
+    height:100%;
+    background:#cafc05;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+    .product-imagess img
+    {
+    width: 250px;
+    object-fit:cover;
+    display:block;
+    border-radius: 20px;
+    
+  }
+    .product-detailss
+    {
+      flex:1;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:8px;
+      position: relative;
+      top: 20px;
+  }
+    .meta
+     {
+         color:black; 
+          font-size:16px;
+         display:flex; 
+         gap:10px;
+       flex-wrap:wrap;
+        margin-bottom: 10px;
+        width: 400px;
+       }
+    .title
+     { 
+      font-size:22px;
+      font-weight:700; 
+      color:#0b1220;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+       }
+    .desc 
+    {
+      font-size:13px;
+     color:#23303f; 
+     line-height:1.5;
+     margin-bottom: 10px;
+     }
+    .price
+     {
+          font-size:30px;
+          color:rgb(9, 182, 9); 
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.748);
+          font-weight:800;
+         
+          float: right;
+         }
+    .seller-info
+     {
+         display:flex;
+         gap:12px; 
+         flex-wrap:wrap;
+          font-size:15px; 
+          color:black;
+          margin-top: 10px;
+         }
+    .controls
+    {
+        display:flex;
+        gap:10px;
+        align-items:center
+    }
+    .btn-remove
+    {
+        background:rgb(169, 5, 5);
+        color:white;
+        border:1px inset black;
+        padding:10px 12px;
+        border-radius:10px;
+        cursor:pointer;
+        position: relative;
+        bottom: 20px;
+    }
+    .btn-open
+    {
+        background:#0171d3;
+        color:white;
+        border:none;
+        padding:10px 12px;
+        border-radius:10px;
+        border:1px inset black;
+        cursor:pointer;
+        position: relative;
+        bottom: 20px;
+    }
+    #selllink{
+    scroll-margin: 100px;
+  }
+    .ban-sell{
+      
+      width: 100%;
+      height: 350px;
+      background-color: white;
+      margin: 0;
+      position: relative;
+      bottom: 20px;
+      right: 550px;
+      img{
+        width: 100%;
+        position: absolute;
+        top: 20px;
+      }
+      .ban-con{
+       position: relative;
+       left: 400px;
+       top: 100px;
+      
+       h1{
+        color: #cafc05;
+        text-shadow: 2px 2px 2px black;
+        font-family: "trirong", sans-serif;
+        font-size: 35px;
+        position: relative;
+        bottom: 20px;
+        left: 50px ;
+  
+       }
+       p{
+         color: white;
+        text-shadow: 2px 2px 2px black;
+        font-family: "trirong", sans-serif;
+        width: 700px;
+         position: relative;
+        left: 70px;
+        bottom: 20px;
+  
+       }
+       a {
+      cursor: pointer;
+      width: 200px;
+      font-weight: bold;
+      display: inline;
+      padding: .75rem 1.25rem;
+      border-radius: 10rem;
+      border: 2px solid rgba(253, 252, 252, 0.603);
+      text-align: center;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: .15rem;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.54);
+      z-index: 1;
+      position: absolute;
+      top: 120px;
+      left: 250px;
+      text-transform: capitalize;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cafc05;
+        border-radius: 10rem;
+        z-index: -2;
+        border: 2px soild black;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #0171d3;
+        transition: all .3s;
+        border-radius: 10rem;
+        z-index: -1;
+        border: 2px soild rgb(253, 251, 251);
+
+      }
+
+      &:hover {
+        color: #fff;
+             box-shadow:2px 2px 2px 2px rgba(0, 0, 0, 0.523);
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+      }
+      .sell-mini{
+        background-color: white;
+        width: 1510px;
+        height: 80px;
+        position: relative;
+        right: 545px;
+        top: -45px;
+        margin: 5px;
+        margin-right: 15px;
+        h1{
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 40px;
+          text-transform: uppercase;
+          transform: translate(2%,30%);
+          color: #0171d3;
+          text-shadow: 2px 2px 2px  #03030383;
+        }
+      }
+    #img-sell{
+      position: relative;
+      left: 740px;
+    }
+
+    @media (max-width:900px){.product-box{flex-direction:column;height:auto}.product-image{flex:0 0 auto;height:260px}}
+
+    /* Professional Image Upload Section */
+    .upload-area {
+      width: 690px;
+      border: 2px dashed #cafc05;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      background: #cde5fa;
+      cursor: pointer;
+      transition: 0.2s;
+      height: 225px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.54);
+      
+    }
+    
+    .upload-area:hover {
+      background: #f1f5f9;
+    }
+    .upload-area p {
+      font-size: 30px;
+      color: black;
+      margin-bottom: 8px;
+      position: relative;
+      top: 0px;
+    }
+    .upload-preview img {
+      width: 180px;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+<body>
+    <header class="header">
+      <div class="subheader">
+      <h1 class="buyn">
+        <span style="color: #0171d3">Buy</span><span style="color: #cafc05">Cycle</span>
+      </h1>
+
+      <div class="search">
+        <input
+          type="search"
+          class="input"
+          placeholder="   What are you looking for..."
+        />
+        <button class="btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <script src="search.js"></script>
+      <div class="icons1">
+        <i class="fa fa-heart" style="font-size: 20px;"> <a href="wishlist.html">Wishlist</a></i>
+        <i class="fa fa-shopping-bag" style="font-size: 20px"> <a href="cart.html">Cart</a></i>
+        <i class="fa fa-user-circle" style="font-size: 20px"><a href="account.html">Account</a> </i>
+      </div>
+
+      <button class="logout"  onclick="logout()">
+          <i class="fa fa-sign-out" style="font-size: 20px">
+            <p style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;">Logout</p></i
+          >
+        </button>
+        <script>
+          function logout(){
+  localStorage.removeItem("userid");
+  window.location.href = "index.html";
+}
+ </script>
+        
+        
+        <ul class="sidebar">
+          <li onclick="hidesidebar()" class="hidebar"><a href="#" >&times; Cancel</a></li>          
+          <li><a href="home.html" ><i class="fa fa-home" style="font-size: 20px"> Home</i></a></li>
+          <li><a href="cart.html" ><i class="fa fa-shopping-bag" style="font-size: 20px">  Cart</i></a></li>
+          <li><a href="wishlist.html" ><i class="fa fa-heart" style="font-size: 20px">  Wishlist</i></a></li>
+          <li><a href="#" ><i class="fa fa-user-circle" style="font-size: 20px">  Account</i></a></li>
+          <li><a href="shop.html" ><i class="fa fa-university" style="font-size: 20px">  Shop</i></a></li>
+          <li><a href="#" ><i class="fa fa-money" style="font-size: 20px"> Market Place </i></a></li>
+          <li><a href="#" ><i class="fa fa-credit-card" style="font-size: 20px"> Sell Items </i></a></li>
+
+          <li><a href="index.html" ><i class="fa fa-sign-out" style="font-size: 20px">  Logout</i></a></li>
+        </ul>
+        
+        </div>
+      </header>
+      
+      <nav class="nav">
+        <ul>
+          <li class="hideOnMobile"><a href="home.html" >Home</a></li>
+          <li class="hideOnMobile"><a href="shop.html" >Shop</a></li>
+          <li class="hideOnMobile"><a href="marketplace.html" >Market Place</a></li>
+          <li class="hideOnMobile"><a href="sellitem.html" >Sell Items</a></li>
+          
+          <li class="hideOnMobile"><a href="home.html#contact" >Contact</a></li>
+         
+        
+      </ul>
+      <a href="#" class="threeline" onclick="showsidebar()">&#9776</a>
+      <script>
+            function showsidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'flex'
+              }
+              function hidesidebar() {
+             const sidebar = document.querySelector('.sidebar')
+             sidebar.style.display = 'none'
+              }
+      </script>
+    </nav>
+  
+
+  <header class="sell-head">
+    <h1 class="sell-title" data-aos="fade-right" data-aos-duration="2000">sell your products...</h1>
+    <a class="btn" href="#sellingproduct" data-aos="flip-up">Selling Product</a>
+    <a class="btn" href="marketplace.html" data-aos="flip-up">Open Market Place</a>
+    
+  </header>
+
+  <main class="sell-main">
+    <section class="card1" aria-labelledby="formTitle" id="selllink">
+      <div id="formTitle">
+        <strong style="font-size:35px;color: #cafc05;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.886);">Add Your Product</strong>
+      </div>
+
+      <form id="productForm" autocomplete="off" class="sell-form" >
+        <div class="row">
+          <div class="col">
+            <label for="sellerName"> Name</label>
+            <input id="sellerName" type="text"  required>
+          </div>
+         
+          <div class="col">
+            <label for="name">Product Name</label>
+            <input id="name" type="text" maxlength="50" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="sellerEmail"> Email</label>
+            <input id="sellerEmail" type="email"  required>
+          </div>
+          <div class="col">
+            <label for="productCondition">Product Condition</label>
+            <select id="productCondition" required>
+              <option value="">Select condition</option>
+              <option>New</option>
+              <option>Like New</option>
+              <option>Used - Good</option>
+              <option>Used - Fair</option>
+              <option>For parts</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="sellerLocation">District</label>
+            <input id="sellerLocation" type="text"  required>
+        </div>
+          <div class="col">
+            <label for="price">Product Price (₹)</label>
+            <input id="price" type="number" min="0" step="0.01"  required>
+          </div>
+        </div>
+
+        <div class="row">
+           <div class="col">
+            <label for="sellerPhone"> Phone number</label>
+            <input id="sellerPhone" type="number"  inputmode="tel" required>
+          </div>
+          
+      <div class="col">
+            <label for="purchaseDate">Purchase Date</label>
+            <input id="purchaseDate" type="date" required>
+          </div>
+       
+          </div>
+         
+
+          <div class="col" id="img-sell" >
+            <label for="imageUpload">Image Upload</label>
+            <div class="upload-area" id="uploadArea">
+              <p>click to upload</p>
+              <input id="imageUpload" type="file" accept="image/*" style="display:none" required>
+              <div class="upload-preview" id="uploadPreview"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top:12px" class="textarea-sell">
+          <label for="description" style="position: relative;bottom: 195px;" >Description</label>
+          <textarea id="description" style="width: 700px;position: relative;right: 95px" placeholder="YOUR PRODUCT DESCRIPTIONS" maxlength="200" required></textarea>
+        </div>
+
+        <div class="form-actions" style="margin-top:16px">
+          <button class="primary" type="submit" style="font-size: 22px;">&#43; Add Product</button>
+          <button class="ghost" id="clearAll" type="button" style="font-size: 22px;">Clear All Products</button>
+          <div style="flex:1"></div>
+          <div class="muted1" style="height: 24px;font-size: 22px; color: rgb(1, 1, 1);box-shadow: 2.1px 2.1px 2.1px  rgba(0, 0, 0, 0.959);background-color: orange;border-radius: 10px; padding:12px;position: relative;  right: 850px;">Total Products: <span id="count">0</span></div>
+        </div>
+      </form>
+      </section>
+      <div class="ban-sell" >
+        <img src="banner2.jpg" alt="">
+        <div class="ban-con"  > 
+        <h1 data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" >Start Selling & Grow Your Business Online!</h1>
+        <p>Join thousands of sellers earning with our platform. List your products, reach more customers, and boost sales easily.</p>
+        <a href="#selllink">Start Selling Today</a>
+        </div>
+      </div>
+      <div class="sell-mini" id="sellingproduct">
+        <h1>Products Info</h1>
+      </div>
+     
+    <div id="belowFormList" style="margin-top:18px"></div>
+    
+  </main>
+  <footer>
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+    
+  
+    <div style="flex: 1; min-width: 220px;">
+      <h1 style="margin-bottom: 15px;"><span class="sell-sec">BUY</span><span>CYCLE</span></h1>
+      <p style="line-height: 1.6; color: #ccc;">
+        Your trusted marketplace for buying and selling electronics. Whether you're a customer or an individual seller, BuyCycle connects you directly, securely, and easily.
+      </p><br>
+      <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="">
+    </div>
+
+   
+    <div class="colum2" style="flex: 1; min-width: 180px;">
+      <h4 style="margin-bottom: 15px;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc;">
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Shop</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Market Place</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Sell items</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div style="flex: 1; min-width: 180px;">
+      <h4 style="margin-bottom: 15px;">Customer Support</h4>
+      <ul style="list-style: none; padding: 0; color: #ccc;">
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Help Center</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Return Policy</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Shipping Info</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Order Tracking</a></li>
+        <li style="padding-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Report a Seller</a></li>
+      </ul>
+    </div>
+
+
+    <div style="flex: 1; min-width: 220px;">
+      <h4 style="margin-bottom: 15px;">Connect With Us</h4>
+      <p style="color: #ccc;padding-bottom: 10px;">Email: abineshvishva457@gmail.com</p>
+      <p style="color: #ccc;padding-bottom: 10px;">Phone: +91 8838246996</p>
+      <p style="color: #ccc;">Location: Faisal nagar, kenikarai, Ramanathapuram - 623504</p>
+
+      
+      
+    </div>
+
+  </div>
+  <br>
+  <div class="social-media">
+ 
+       <div class="social">
+     
+        <a href="https://www.instagram.com/iam_vishva_abinesh?igsh=ZjRpY2ozZXB5OWNo"><i class="fa fa-instagram "></i></a>
+      </div>
+
+      <div class="social">
+        
+        <a href="https://www.facebook.com/share/15kPfXMVGu/"><i class="fa fa-facebook "></i></a>
+      </div>
+
+      <div class="social">
+       
+        <a href=" https://wa.me/qr/M2F5J4TMQ36ZI1 "><i class="fa fa-whatsapp "></i></a>
+      </div>
+
+      <div class="social">
+      
+       <a href="https://x.com/VishvaAbinesh57"><i class="fa fa-twitter"></i></a> 
+      </div>
+      
+      <div class="social">
+        
+        <a href="https://github.com/vishva-abinesh"><i class="fa fa-github"></i></a>
+      </div>
+      <div class="social">
+       
+       <a href="https://www.linkedin.com/in/vishva-abinesh-b9b861326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa fa-linkedin"></i></a> 
+      </div>
+  </div>
+
+  <hr style="margin: 10px 0; width: 1550PX; position: relative; right: 30px; border-color: #f3eded; ">
+
+  <div style="text-align: center; color: #aaa; font-size: 14px; margin-top: 20px;">
+    <a href="https://policies.google.com/privacy?hl=en-US" style="color: #aaa; text-decoration: none; ">Privacy Policy</a> | <a href="https://policies.google.com/terms?hl=en-US" style="color: #aaa; text-decoration: none;">Terms & Conditions</a>
+     <br><br>
+    © 2025 BuyCycle. All rights reserved.
+  </div>
+</footer>
+<button onclick="clearStorage()">Clear Storage</button>
+
+<script>
+(() => {
+  const form = document.getElementById('productForm');
+  const imageInput = document.getElementById('imageUpload');
+  const uploadArea = document.getElementById('uploadArea');
+  const uploadPreview = document.getElementById('uploadPreview');
+  const productListEl = document.getElementById('belowFormList');
+  const countEl = document.getElementById('count');
+
+  let db;
+
+  // Open IndexedDB
+  const request = indexedDB.open('BuyCycleDB', 2);
+
+  request.onupgradeneeded = (e) => {
+    db = e.target.result;
+    if (!db.objectStoreNames.contains('products')) {
+      db.createObjectStore('products', { keyPath: 'id' });
+    }
+  };
+
+  request.onsuccess = (e) => {
+    db = e.target.result;
+    renderBelow();
+    loadSellerDetails();
+  };
+
+  request.onerror = (e) => {
+    console.error('IndexedDB error:', e.target.error);
+  };
+
+  // Image preview
+  uploadArea.addEventListener('click', () => imageInput.click());
+  imageInput.addEventListener('change', () => {
+    const file = imageInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        uploadPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  function fileToDataURL(file) {
+    return new Promise((res, rej) => {
+      const reader = new FileReader();
+      reader.onload = () => res(reader.result);
+      reader.onerror = rej;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str && str !== 0) return '';
+    return String(str)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  function createProductBox(product) {
+    const parent = document.createElement('div');
+    parent.className = 'product-parent';
+
+    const box = document.createElement('div');
+    box.className = 'product-box';
+    box.dataset.id = product.id;
+    box.innerHTML = `
+      <div class="product-imagess">
+        <img src="${product.imageData}" alt="${escapeHtml(product.name)}">
+      </div>
+      <div class="product-detailss">
+        <div>
+          <div class="title">${escapeHtml(product.name)}</div>
+          <p class="desc">${escapeHtml(product.description)}</p>
+          <div class="meta">
+            <strong>Condition:</strong> ${escapeHtml(product.condition)} | 
+            <strong>Purchased:</strong> ${escapeHtml(product.purchaseDate)}
+          </div>
+          <div class="seller-info"><strong>Name:</strong> ${escapeHtml(product.sellerName)}</div>
+          <div class="seller-info"><strong>Phone:</strong> ${escapeHtml(product.sellerPhone)}</div>
+          <div class="seller-info"><strong>Email:</strong> ${escapeHtml(product.sellerEmail)}</div>
+          <div class="seller-info"><strong>Location:</strong> ${escapeHtml(product.sellerLocation)}</div>
+          <span class="price">₹${Number(product.price).toLocaleString()}</span>
+        </div>
+        <div class="controls">
+          <button class="btn-open" data-action="open">Open products page</button>
+          <button class="btn-remove" data-action="remove">Remove</button>
+        </div>
+      </div>
+    `;
+    box.querySelector('[data-action="remove"]').addEventListener('click', () => removeProduct(product.id));
+    box.querySelector('[data-action="open"]').addEventListener('click', () => window.open('marketplace.html', '_blank'));
+
+    parent.appendChild(box);
+    return parent;
+  }
+
+  function addProduct(product) {
+    const tx = db.transaction('products', 'readwrite');
+    const store = tx.objectStore('products');
+    store.add(product);
+    tx.oncomplete = () => {
+        renderBelow();
+        updateSellerStats();
+    };
+    tx.onerror = (e) => console.error('Add product error', e.target.error);
+  }
+
+  function removeProduct(id) {
+    if (!confirm('Remove product permanently?')) return;
+    const tx = db.transaction('products', 'readwrite');
+    const store = tx.objectStore('products');
+    store.delete(id);
+    tx.oncomplete = () => {
+        renderBelow();
+        updateSellerStats();
+    };
+  }
+
+  function clearAllProducts() {
+    if (!confirm('Delete ALL products?')) return;
+    const tx = db.transaction('products', 'readwrite');
+    const store = tx.objectStore('products');
+    store.clear();
+    tx.oncomplete = () => renderBelow();
+  }
+
+  function getAllProducts(callback) {
+    const tx = db.transaction('products', 'readonly');
+    const store = tx.objectStore('products');
+    const req = store.getAll();
+    req.onsuccess = () => callback(req.result);
+  }
+
+  // Function to update admin seller data
+  function updateAdminSellerData(userId, userData) {
+    let adminSellers = JSON.parse(localStorage.getItem("adminSellers")) || {};
+    adminSellers[userId] = {
+        username: userId,
+        email: userData.sellerEmail,
+        phone: userData.sellerPhone,
+        location: userData.sellerLocation,
+        totalProducts: 0,
+        totalValue: 0,
+        joinDate: new Date().toLocaleDateString(),
+        lastActive: new Date().toLocaleString()
+    };
+    localStorage.setItem("adminSellers", JSON.stringify(adminSellers));
+  }
+
+  // Function to update seller stats automatically
+  function updateSellerStats() {
+    const userId = localStorage.getItem('userid');
+    if (!userId) return;
+
+    getAllProducts((products) => {
+        const userProducts = products.filter(p => p.userid === userId);
+        const totalValue = userProducts.reduce((sum, product) => sum + (Number(product.price) || 0), 0);
+
+        let adminSellers = JSON.parse(localStorage.getItem("adminSellers")) || {};
+        if (adminSellers[userId]) {
+            adminSellers[userId].totalProducts = userProducts.length;
+            adminSellers[userId].totalValue = totalValue;
+            adminSellers[userId].lastActive = new Date().toLocaleString();
+            localStorage.setItem("adminSellers", JSON.stringify(adminSellers));
+        }
+    });
+  }
+
+  function renderBelow() {
+    productListEl.innerHTML = '';
+    const userId = localStorage.getItem('userid');
+    getAllProducts((products) => {
+      const userProducts = products.filter(p => p.userid === userId);
+
+      if (userProducts.length === 0) {
+        productListEl.innerHTML = '<div class="muted">No products yet — add one using the form above.<br><a href="#selllink" data-aos="fade-right"><button class="btn-arrow">&#8593;</button></a></div>';
+        countEl.textContent = 0;
+      } else {
+        userProducts.slice().reverse().forEach(p => productListEl.appendChild(createProductBox(p)));
+        countEl.textContent = userProducts.length;
+      }
+
+      // Also update seller details
+      loadSellerDetails();
+    });
+  }
+
+  // Seller Details Functionality
+  function loadSellerDetails() {
+    const userId = localStorage.getItem('userid');
+    if (!userId) {
+        document.getElementById('sellerProductsGrid').innerHTML = '<div class="no-products">Please login to view seller details</div>';
+        return;
+    }
+
+    getAllProducts((products) => {
+        const userProducts = products.filter(p => p.userid === userId);
+        
+        // Update stats
+        if (document.getElementById('totalProducts')) {
+            document.getElementById('totalProducts').textContent = userProducts.length;
+            document.getElementById('activeProducts').textContent = userProducts.length;
+            document.getElementById('totalValue').textContent = userProducts.reduce((sum, product) => sum + (Number(product.price) || 0), 0).toLocaleString();
+        }
+        
+        // Update products grid
+        const productsGrid = document.getElementById('sellerProductsGrid');
+        if (!productsGrid) return;
+        
+        if (userProducts.length === 0) {
+            productsGrid.innerHTML = `
+                <div class="no-products">
+                    <i class="fa fa-box" style="font-size: 48px; margin-bottom: 15px; color: #ccc;"></i>
+                    <p>You haven't listed any products yet.</p>
+                    <p>Start selling by adding your first product above!</p>
+                </div>
+            `;
+            return;
+        }
+
+        productsGrid.innerHTML = userProducts.slice().reverse().map(product => `
+            <div class="seller-product-card" data-aos="zoom-in">
+                <img src="${product.imageData}" alt="${escapeHtml(product.name)}" class="seller-product-image">
+                <div class="seller-product-name">${escapeHtml(product.name)}</div>
+                <div class="seller-product-price">₹${Number(product.price).toLocaleString()}</div>
+                <div class="seller-product-condition">${escapeHtml(product.condition)}</div>
+                <div style="font-size: 12px; color: #666; margin-bottom: 10px;">
+                    Listed: ${new Date().toLocaleDateString()}
+                </div>
+                <button class="btn-remove" onclick="removeProduct('${product.id}')" style="width: 100%;">
+                    <i class="fa fa-trash"></i> Remove Listing
+                </button>
+            </div>
+        `).join('');
+    });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const file = imageInput.files[0];
+    if (!file) { alert('Please select an image.'); return; }
+
+    try {
+        const imageData = await fileToDataURL(file);
+        const userId = localStorage.getItem('userid');
+        const newProduct = {
+            id: String(Date.now()) + Math.random().toString(36).slice(2, 8),
+            userid: userId,
+            sellerName: document.getElementById('sellerName').value.trim(),
+            sellerPhone: document.getElementById('sellerPhone').value.trim(),
+            sellerLocation: document.getElementById('sellerLocation').value.trim(),
+            sellerEmail: document.getElementById('sellerEmail').value.trim(),
+            condition: document.getElementById('productCondition').value,
+            purchaseDate: document.getElementById('purchaseDate').value,
+            name: document.getElementById('name').value.trim(),
+            description: document.getElementById('description').value.trim(),
+            price: Number(document.getElementById('price').value) || 0,
+            imageData
+        };
+
+        // Store seller data for admin
+        updateAdminSellerData(userId, newProduct);
+        
+        addProduct(newProduct);
+        form.reset();
+        uploadPreview.innerHTML = '';
+        
+        setTimeout(loadSellerDetails, 100);
+    } catch (err) {
+        console.error(err);
+        alert('Failed to read image.');
+    }
+  });
+
+  document.getElementById('clearAll').addEventListener('click', clearAllProducts);
+
+  // Load seller details when page loads
+  setTimeout(loadSellerDetails, 500);
+
+})();
+
+// Clear Storage function (keep this if you need it)
+function clearStorage() {
+    if (confirm('Clear all storage? This will remove all products and seller data.')) {
+        localStorage.clear();
+        indexedDB.deleteDatabase('BuyCycleDB');
+        location.reload();
+    }
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
+

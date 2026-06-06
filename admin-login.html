@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyCycle - Admin Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="BUY CYCLE.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+      .log1{
+        background-color: #0171d3;
+    font-size: 50px;
+    position: absolute;
+    top: -90px;
+    left: 85px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cafc05;
+    text-shadow:
+      -2px -2px 0 #4a5b07,
+      2px -2px 0 #4a5b07,
+      -2px 2px 0 #4a5b07,
+      2px 2px 0 #4a5b07;
+
+        width: max-content;
+      }
+      .back-log{
+        position: relative;
+        top: 120px;
+        text-align: center;
+        
+    background-color: inherit;
+    font-size: 20px;
+    width: 550px;
+    
+  
+
+  a {
+    text-decoration: none;
+    background-color: inherit;
+  }
+
+      }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h1 class="buyn"><span style="color:#0171d3">Buy</span><span style="color:#cafc05">Cycle</span></h1>
+ <div class="lmain">
+            <img class="loginpic" src="admin.jpeg" alt="">
+           <div class="login-welcome" style="position: relative;left: 170px;bottom:150px;"> Welcome! Admin</div>
+            <div class="quote" style="position: relative;left: 100px;">Hey Admin — good to see you. Let’s get to work!"</div>
+        </div>
+
+    <div class="rmain">
+        <form class="form" id="adminLoginForm">
+            <h1 class="log1" >BuyCycle Admin</h1>
+            <label class="text">Admin Username</label>
+            <input type="text" id="adminUsername" required>
+            
+            <label class="text">Admin Password</label>
+            
+             <div class="input-container">
+                     <input type="password" id="adminPassword" required>
+                    <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+                </div>
+            
+            <input type="submit" value="Login as Admin">
+        </form>
+        <p class="back-log">Back to ?
+            <a href="index.html"> User Login</a>
+        </p>
+    </div>
+
+
+
+        </div>
+   
+    <p class="copy">&copy; 2025 BuyCycle. All rights reserved.</p>
+
+    <script>
+    const ADMIN_CREDENTIALS = {
+        username: "vishva",
+        password: "admin123"
+    };
+
+    document.getElementById("adminLoginForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const username = document.getElementById("adminUsername").value;
+        const password = document.getElementById("adminPassword").value;
+
+        if(username === ADMIN_CREDENTIALS.username && password === ADMIN_CREDENTIALS.password){
+            localStorage.setItem("adminLoggedIn", "true");
+            window.location.href = "admin-dashboard.html";
+        } else {
+            alert("Invalid admin credentials!");
+        }
+    });
+     // Show/Hide Password
+    const password = document.getElementById('adminPassword');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    eyeIcon.addEventListener('click',()=>{
+        if(password.type === 'password'){
+            password.type = 'text';
+            eyeIcon.classList.remove('fa-eye-slash');
+            eyeIcon.classList.add('fa-eye');
+        } else {
+            password.type = 'password';
+            eyeIcon.classList.remove('fa-eye');
+            eyeIcon.classList.add('fa-eye-slash');
+        }
+    });
+    </script>
+</body>
+</html>
+
+
